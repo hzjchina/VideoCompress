@@ -149,7 +149,7 @@ public class SwiftVideoCompressPlugin: NSObject, FlutterPlugin {
         case 3:
             return AVAssetExportPresetHighestQuality
         default:
-            return AVAssetExportPreset960x540
+            return AVAssetExportPreset640x480
         }
     }
     
@@ -196,7 +196,7 @@ public class SwiftVideoCompressPlugin: NSObject, FlutterPlugin {
         let exporter = AVAssetExportSession(asset: session, presetName: getExportPreset(quality))!
         
         exporter.outputURL = compressionUrl
-        exporter.outputFileType = AVFileTypeMPEG4
+        exporter.outputFileType = AVFileType.mp4
         exporter.shouldOptimizeForNetworkUse = true
         
         if frameRate != nil {
