@@ -94,7 +94,7 @@ class VideoCompressPlugin : MethodCallHandler, FlutterPlugin {
 
                     0 -> {
 //                      videoTrackStrategy = DefaultVideoStrategy.atMost(720).build()
-                      videoTrackStrategy = DefaultVideoStrategy.atMost(960).build()
+                      videoTrackStrategy = DefaultVideoStrategy.atMost(540).build()
                     }
 
                     1 -> {
